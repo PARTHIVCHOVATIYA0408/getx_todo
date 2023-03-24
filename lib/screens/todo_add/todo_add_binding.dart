@@ -7,5 +7,4 @@ class TodoBinding implements Bindings {
     // TODO: implement dependencies
     Get.put<ToDoController>(ToDoController());
   }
-
 }

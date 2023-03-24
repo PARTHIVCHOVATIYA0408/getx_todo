@@ -2,7 +2,9 @@ class TodoModel {
   final List<Data>? data;
 
   TodoModel({
-    this.data, required String description, required String title,
+    this.data,
+    required String description,
+    required String title,
   });
 
   TodoModel.fromJson(Map<String, dynamic> json)

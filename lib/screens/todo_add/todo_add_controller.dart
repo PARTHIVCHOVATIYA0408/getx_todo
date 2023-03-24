@@ -11,11 +11,11 @@ class ToDoController extends GetxController {
 
   SharedPreferences? sharedPreferences;
   List<TodoModel> appData = [];
-
   @override
-  void initState() {
-    // GetInstance();
+  void onInit() {
+    // TODO: implement onInit
     getInstance();
+    super.onInit();
   }
 
   getInstance() async {
@@ -29,8 +29,7 @@ class ToDoController extends GetxController {
         description: descriptionController.text,
       ),
     );
-
-    setDataInSF();
+    setDataInfo();
   }
 
   getToDoData() {
@@ -42,12 +41,11 @@ class ToDoController extends GetxController {
     }
   }
 
-  setDataInSF() {
+  setDataInfo() {
     sharedPreferences!.setString(
       "toDoData",
       jsonEncode(appData),
     );
     Get.back();
-    // Navigator.pop(context);
   }
 }

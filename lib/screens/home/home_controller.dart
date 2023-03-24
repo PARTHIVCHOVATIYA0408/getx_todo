@@ -9,9 +9,10 @@ class HomeController extends GetxController {
   SharedPreferences? sharedPreferences;
 
   @override
-  void initState() {
-    // TODO: implement initState
+  void onInit() {
+    // TODO: implement onInit
     getInstance();
+    super.onInit();
   }
 
   getInstance() async {
@@ -27,8 +28,7 @@ class HomeController extends GetxController {
           .map(
             (dynamic e) => TodoModel.fromJson(e),
           )
-          .toList()
-          .obs;
+          .toList();
     }
   }
 }
