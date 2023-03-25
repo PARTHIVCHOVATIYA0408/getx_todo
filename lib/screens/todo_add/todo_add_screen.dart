@@ -26,6 +26,7 @@ class TodoAddScreen extends GetView<ToDoController> {
             ),
             const SizedBox(height: 15),
             TextField(
+              controller: controller.descriptionController,
               decoration: InputDecoration(
                 hintText: "Description",
                 border: OutlineInputBorder(
@@ -36,7 +37,7 @@ class TodoAddScreen extends GetView<ToDoController> {
             const SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
-                // controller.setDataInModel().value.toString();
+                // controller.setDataInModel();
                 debugPrint('--->> ${controller.appData}');
               },
               child: const Text("ADD DATA"),

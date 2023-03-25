@@ -37,7 +37,8 @@ class ToDoController extends GetxController {
       dynamic data = sharedPreferences!.getString("toDoData");
       appData = (jsonDecode(data) as List?)!
           .map((dynamic e) => TodoModel.fromJson(e))
-          .toList();
+          .toList()
+          .obs;
     }
   }
 
